@@ -7,6 +7,8 @@ exports.up = function(knex, Promise) {
 
         tbl.integer('recipe_id').unsigned().references('id').inTable('recipes')
         .notNullable()
+
+        tbl.float('ingredient_quantity')
   
         tbl.timestamps(true, true)
     })
